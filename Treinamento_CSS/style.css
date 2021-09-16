@@ -1,20 +1,28 @@
-/* TAGs */
 body {
     text-align: center;
 }
-
-/* ID */
-#login {
-    background-color: black;
-    color: white;
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
 }
 
-#registre {
-    background-color: blue;
-    color: white;
+p {
+    text-align: justify;
+    padding: 0 10px;
 }
 
-/* classes */
-.copy {
-    font-size: 8px;
+.lista_footer {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    padding: 10px; 
+}
+
+a {
+    text-decoration: none;
+
 }
