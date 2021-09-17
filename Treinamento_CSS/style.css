@@ -1,0 +1,85 @@
+/*Predefinições*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color: #2e2d27;
+    font-family: 'Poppins',sans-serif;
+}
+
+ul {
+    list-style: none;
+    font-style: italic;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid white; */
+    /* box-shadow: 1px 1px 10px 1px white; */
+    border-bottom: 15px ridge white;
+}
+
+header img{
+    transform: rotate(90deg);
+    max-width: 100px;
+}
+
+header ul{
+    display: flex;
+    align-content: center;
+}
+
+header ul li{
+    padding: 10px;
+    border-left: 1px dashed black;
+}
+
+
+body {
+    /* background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed; */
+    background: url(./background.jpg) no-repeat center center fixed;
+
+    background-size: cover;
+
+    /* Para Gradientes
+    background: linear-gradient(90deg,#EB5757,#000000) ; */
+}
+
+.container {
+    text-align: center;
+}
+
+.container .name h1 {
+    font-size: 60px;
+}
+
+.container .name h5 {
+    font-size: 30px;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+}
+.form input {
+    width: 50%;
+}
+
+.form button {
+    width: 15%;
+}
