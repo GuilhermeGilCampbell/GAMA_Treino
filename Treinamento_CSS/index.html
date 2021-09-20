@@ -33,10 +33,12 @@
                 <h1>Guilherme Campbell</h1>
                 <h5>Full-stack Develevoper</h5>
             </div>
-            <div id=Arrow>
-                <i class="fas fa-sort-down"></i>
+
+            <div onclick ="displayAbout()" id="arrow">
+                <i id="animation" class="fas fa-sort-down"></i>
             </div>
-            <div id="about">
+
+            <div style="display: none;" id="about">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui cumque provident voluptatum dolor
                     atque tempora minima nulla unde at porro iure repudiandae reiciendis dicta quos quasi officia
@@ -56,6 +58,16 @@
             </div>
         </section>
     </main>
+
+
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById(`animation`);
+            arrow.classList.toggle(`rotate`);
+            var display = document.getElementById(`about`);
+            display.classList.toggle(`active`);
+        }
+    </script>
 </body>
 
 </html>

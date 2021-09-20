@@ -21,7 +21,7 @@ a {
 header {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
     /* border-bottom: 1px solid white; */
     /* box-shadow: 1px 1px 10px 1px white; */
     border-bottom: 15px ridge white;
@@ -40,6 +40,15 @@ header ul{
 header ul li{
     padding: 10px;
     border-left: 1px dashed black;
+}
+
+header ul li a{
+    transition: 300ms;
+}
+
+header ul li a:hover{
+    color:rgb(9, 128, 128);
+    text-decoration: underline;
 }
 
 
@@ -67,6 +76,31 @@ body {
     font-size: 30px;
 }
 
+#arrow {
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1s steps(5,start) infinite;
+}
+
+@keyframes blink{
+    to{
+        visibility: hidden;
+    }
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active {
+    display: block !important;
+}
+
 #about p {
     max-width: 600px;
     margin: 0 auto;
@@ -75,11 +109,34 @@ body {
 .form {
     width: 40%;
     margin: 0 auto;
+    margin-top: 30px;
 }
+
 .form input {
     width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .form button {
     width: 15%;
+    min-width: 70px;
+    padding: 5px 10px;
+    background: linear-gradient(to right, rgb(121, 34, 34) 50%, rgb(80, 112, 255) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 300ms ease-out;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -5px;
+
+}
+
+.form button:hover{
+    background-position: left bottom;
+    color: rgb(36, 33, 33);
 }
