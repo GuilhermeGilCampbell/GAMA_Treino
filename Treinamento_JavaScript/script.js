@@ -47,3 +47,4 @@ return (value * 9/5)+32;
 // let result = convertToFahrenheit(100);
 // console.log('O valor em Fahrenheit é '+ result);
 
+console.log("estou rodando com o code runner")
