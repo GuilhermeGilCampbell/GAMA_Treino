@@ -12,11 +12,20 @@ const server = http.createServer((req, res) => {
     console.log(params);
 
     //Verificar a pergunta e escolher uma resposta
+    if(params.pergunta == 'melhor-filme'){
+        resposta = 'star wars';
+    } else if (params.pergunta == 'melhor-tecnologia-backend') {
+        resposta = 'node.js';
+    
+    } else {
+        resposta = `não sei desculpe`;
+    }
+
     //Retornar a resposta escolhida
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end(params);
+  res.end(resposta);
 });
 
 server.listen(port, hostname, () => {
