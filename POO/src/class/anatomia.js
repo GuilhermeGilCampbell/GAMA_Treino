@@ -15,6 +15,8 @@ class Person{
     }
 }
 
+
+
 const Pessoa = new Person;
 
 module.exports = Pessoa;
