@@ -42,10 +42,27 @@ class User extends MachineOptions {
         }
     }
 
-    game() {
-        return this.logic()
-    }
+    game(){
+        return inquirer
+        .prompt([
+            {
+                name: 'name',
+                message: 'Qual o seu nome',
+                default: 'Jogador'
+            },
+            {
+                type: 'list',
+                name: 'jokenpo',
+                message: 'Selecione uma destas opções',
+                choices: options
 
+            }
+        ]).then((answers) =>{
+            this._selected = answers.jokenpo;
+            this._name = answers.name;
+            console.info(`O resultado é: ${this.logic()}`)
+        })
+    }
 }
 
 module.exports = User
