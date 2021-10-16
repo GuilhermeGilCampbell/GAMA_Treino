@@ -41,6 +41,32 @@ class User extends MachineOptions {
         }
     }
 
+    ask() {
+        return inquirer
+            .prompt([
+                {
+                    name: 'name',
+                    message: 'Qual o seu nome',
+                    default: 'Jogador'
+                },
+                {
+                    type: 'list',
+                    name: 'jokenpo',
+                    message: 'Selecione uma destas opções',
+                    choices: options
+
+                }
+            ])
+    }
+
+    result(answers){
+
+        this._selected = answers.jokenpo;
+        this._name = answers.name;
+        console.info(`O resultado é: ${this.logic()}`)
+
+    }
+
     async game(){
         const answers = await this.ask();
         this.result(answers);
@@ -68,32 +94,6 @@ class User extends MachineOptions {
     //             console.info(`O resultado é: ${this.logic()}`)
     //         })
     // }
-
-    ask() {
-        return inquirer
-            .prompt([
-                {
-                    name: 'name',
-                    message: 'Qual o seu nome',
-                    default: 'Jogador'
-                },
-                {
-                    type: 'list',
-                    name: 'jokenpo',
-                    message: 'Selecione uma destas opções',
-                    choices: options
-
-                }
-            ])
-    }
-
-    result(answers){
-
-        this._selected = answers.jokenpo;
-        this._name = answers.name;
-        console.info(`O resultado é: ${this.logic()}`)
-
-    }
 
 }
 
