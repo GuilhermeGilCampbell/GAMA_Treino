@@ -1,8 +1,8 @@
-import Home from "./views/Home"
+import Router from "./routes"
 
 function App() {
   return (
-    <Home />
+    <Router />
   );
 }
 
