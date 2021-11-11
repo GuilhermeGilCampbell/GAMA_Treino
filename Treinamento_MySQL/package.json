@@ -1,0 +1,14 @@
+{
+  "name": "treinamento_mysql",
+  "version": "1.0.0",
+  "description": "folder para treinamento em mySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guilherme Campbell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
