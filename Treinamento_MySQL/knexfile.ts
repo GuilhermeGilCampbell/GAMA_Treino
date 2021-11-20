@@ -19,6 +19,4 @@ export default {
     seeds: {
         directory: path.resolve(__dirname,'src','database','seeds'),
     }
-
-
 };
